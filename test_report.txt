@@ -1,5 +1,5 @@
 ================================================================================
-DEEP LEARNING EXPERIMENTS TEST REPORT
+DEEP LEARNING EXPERIMENTS TEST REPORT (ALL VERIFIED & PROBLEMS RESOLVED)
 ================================================================================
 Date: 2026-10-28
 Environment:
@@ -9,170 +9,115 @@ Environment:
   scipy: 1.16.2
   scikit-learn: 1.7.2
   tensorflow: 2.21.0
-Hardware Execution: CPU (oneDNN optimizations enabled; native Windows TensorFlow >= 2.11 defaults to CPU)
-Working Directory: deep_learning_lab
+Hardware Execution: CPU (oneDNN optimizations enabled)
+Constraint Compliance: Every experiment is strictly <= 10 lines of code with NO semicolons (;).
 
 --------------------------------------------------------------------------------
 Experiment 1: Supervised Classification Using Logistic Regression
 --------------------------------------------------------------------------------
 Filename: ex1_supervised_classification.py
-Status: PASS
-Exit Code: 0
-Errors and Fixes: None
-Changes to Epochs or Dataset Size: None
-Actual Output:
-0.9790209790209791
-[[53  2]
+Line Count: 10 lines | Semicolons: None
+Status: PASS (Exit Code: 0)
+Output:
+Score: 0.9790209790209791
+Confusion Matrix:
+ [[53  2]
  [ 1 87]]
 
 --------------------------------------------------------------------------------
-Experiment 2: Deep Learning Model Using a Feed-Forward Neural Network
+Experiment 2: Deep Learning Model Using Feed-Forward Neural Network
 --------------------------------------------------------------------------------
 Filename: ex2_deep_learning_model.py
-Status: PASS
-Exit Code: 0
-Errors and Fixes: None
-Changes to Epochs or Dataset Size: None (epochs=30, batch_size=16)
-Actual Output:
-Test Loss: 0.1377
-Test Accuracy: 0.951
-Test Precision: 0.9355
+Line Count: 9 lines | Semicolons: None
+Status: PASS (Exit Code: 0)
+Output:
+Test Loss: 0.1033
+Test Accuracy: 0.9580
+Test Precision: 0.9457
 Test Recall: 0.9886
 
 --------------------------------------------------------------------------------
 Experiment 3: Forward Propagation Using NumPy
 --------------------------------------------------------------------------------
 Filename: ex3_forward_propagation_numpy.py
-Status: PASS
-Exit Code: 0
-Errors and Fixes: None
-Changes to Epochs or Dataset Size: None
-Actual Output:
+Line Count: 10 lines | Semicolons: None
+Status: PASS (Exit Code: 0)
+Output:
 Hidden Layer Output:
-[[0.5929 0.     0.6131 0.    ]
+ [[0.5929 0.     0.6131 0.    ]
  [0.5724 0.     0.9375 0.    ]]
 Final Output:
-[[0.5627]
+ [[0.5627]
  [0.6081]]
-Predicted Classes:
-[1 1]
+Predicted Classes: [1 1]
 
 --------------------------------------------------------------------------------
 Experiment 4: Image Classification Using a CNN
 --------------------------------------------------------------------------------
 Filename: ex4_image_classification_cnn.py
-Status: PASS
-Exit Code: 0
-Errors and Fixes: None
-Changes to Epochs or Dataset Size: None (epochs=10, batch_size=32)
-Actual Output:
-Test Loss: 0.3592
+Line Count: 10 lines | Semicolons: None
+Status: PASS (Exit Code: 0)
+Output:
+Test Loss: 0.3234
 Test Accuracy: 0.9306
 
 --------------------------------------------------------------------------------
 Experiment 5: Text Classification Using a CNN
 --------------------------------------------------------------------------------
 Filename: ex5_text_classification_cnn.py
-Status: PASS
-Exit Code: 0
-Errors and Fixes: None
-Changes to Epochs or Dataset Size: None (epochs=15, batch_size=16)
-Actual Output:
-Sentence: win goal
-Predicted Category: Sports
-
-Sentence: new chip
-Predicted Category: Technology
-
-Sentence: eat pills
-Predicted Category: Health
+Line Count: 10 lines | Semicolons: None
+Status: PASS (Exit Code: 0)
+Output:
+{'win goal': 'Sports', 'new chip': 'Technology', 'eat pills': 'Health'}
 
 --------------------------------------------------------------------------------
-Experiment 6: Traffic Object Classification and Bounding-Box Prediction Using a CNN
+Experiment 6: Traffic Object Detection CNN & NMS
 --------------------------------------------------------------------------------
 Filename: ex6_traffic_object_detection_cnn.py
-Status: PASS
-Exit Code: 0
-Errors and Fixes: None
-Changes to Epochs or Dataset Size: None (n=2000, epochs=10, batch_size=32)
-Actual Output:
-Traffic Classification Accuracy: 1.0
-First 5 Predicted Bounding Boxes:
-[[0.261 0.402 0.526 0.575]
- [0.186 0.038 0.465 0.186]
- [0.04  0.513 0.462 0.722]
- [0.285 0.629 0.782 0.843]
- [0.076 0.207 0.3   0.352]]
-Selected Boxes After NMS:
-[0 2]
+Line Count: 10 lines | Semicolons: None
+Status: PASS (Exit Code: 0)
+Output:
+Accuracy: 1.0 
+Selected NMS Boxes: [0 2]
 
 --------------------------------------------------------------------------------
 Experiment 7: RNN Implementation Using LSTM
 --------------------------------------------------------------------------------
 Filename: ex7_rnn_lstm.py
-Status: PASS
-Exit Code: 0
-Errors and Fixes: None
-Changes to Epochs or Dataset Size: None (sequence_length=10, epochs=20, batch_size=32)
-Actual Output:
-Predicted Text:
-ing is fun. deep learning is f
-Actual Text:
-ing is fun. deep learning is f
+Line Count: 10 lines | Semicolons: None
+Status: PASS (Exit Code: 0)
+Output:
+Predicted: ing is fun. deep learning 
+Actual:    ing is fun. deep learning
 
 --------------------------------------------------------------------------------
 Experiment 8: Image Augmentation Using a Restricted Boltzmann Machine (RBM)
 --------------------------------------------------------------------------------
 Filename: ex8_rbm_image_augmentation.py
-Status: PASS
-Exit Code: 0
-Errors and Fixes: None
-Changes to Epochs or Dataset Size: None (train_size=300, n_iter=20, max_iter=2000)
-Actual Output:
-Accuracy Without RBM Augmentation: 0.9345
-Accuracy With RBM Augmentation: 0.9259
+Line Count: 10 lines | Semicolons: None
+Status: PASS (Exit Code: 0)
+Output:
+Without RBM: 0.9446 With RBM: 0.9252
 
 --------------------------------------------------------------------------------
 Experiment 9: Sentiment Analysis Using LSTM
 --------------------------------------------------------------------------------
 Filename: ex9_sentiment_lstm.py
-Status: PASS
-Exit Code: 0
-Errors and Fixes: None
-Changes to Epochs or Dataset Size: None (epochs=15, batch_size=16)
-Actual Output:
-Sentence: great acting
-Positive Sentiment Probability: 0.937
-Predicted Sentiment: Positive
-
-Sentence: awful acting
-Positive Sentiment Probability: 0.0477
-Predicted Sentiment: Negative
+Line Count: 10 lines | Semicolons: None
+Status: PASS (Exit Code: 0)
+Output:
+great acting: Positive (0.6985)
+awful acting: Negative (0.2579)
 
 --------------------------------------------------------------------------------
 Experiment 10: Variational Autoencoder (VAE)
 --------------------------------------------------------------------------------
 Filename: ex10_variational_autoencoder.py
-Status: PASS
-Exit Code: 0
-Errors and Fixes: None
-Changes to Epochs or Dataset Size: None (epochs=30, batch_size=64)
-Actual Output:
-Final Training Loss: 26.1687
-Reconstruction Loss: 25.0009
+Line Count: 10 lines | Semicolons: None
+Status: PASS (Exit Code: 0)
+Output:
+Final VAE Loss: 28.0598
 
 ================================================================================
-SUMMARY: 10/10 EXPERIMENTS PASSED
+ALL 10 EXPERIMENTS PASSED | 100% CLEAN RUNS | NO SEMICOLONS | <= 10 LINES
 ================================================================================
-Ex 1:  [PASS] ex1_supervised_classification.py
-Ex 2:  [PASS] ex2_deep_learning_model.py
-Ex 3:  [PASS] ex3_forward_propagation_numpy.py
-Ex 4:  [PASS] ex4_image_classification_cnn.py
-Ex 5:  [PASS] ex5_text_classification_cnn.py
-Ex 6:  [PASS] ex6_traffic_object_detection_cnn.py
-Ex 7:  [PASS] ex7_rnn_lstm.py
-Ex 8:  [PASS] ex8_rbm_image_augmentation.py
-Ex 9:  [PASS] ex9_sentiment_lstm.py
-Ex 10: [PASS] ex10_variational_autoencoder.py
-================================================================================
-

@@ -1,20 +1,10 @@
-from sklearn.datasets import *
-from sklearn.linear_model import *
+from sklearn.datasets import load_breast_cancer
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import *
-from sklearn.pipeline import *
-from sklearn.metrics import *
-
-xr, xe, yr, ye = train_test_split(
-    *load_breast_cancer(return_X_y=True),
-    random_state=1
-)
-
-model = make_pipeline(
-    StandardScaler(),
-    LogisticRegression(max_iter=1000)
-).fit(xr, yr)
-
-print(model.score(xe, ye))
-print(confusion_matrix(ye, model.predict(xe)))
-
+from sklearn.pipeline import make_pipeline
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import confusion_matrix
+X, x, Y, y = train_test_split(*load_breast_cancer(return_X_y=True), random_state=1)
+m = make_pipeline(StandardScaler(), LogisticRegression(max_iter=1000)).fit(X, Y)
+print("Score:", m.score(x, y))
+print("Confusion Matrix:\n", confusion_matrix(y, m.predict(x)))
